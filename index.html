@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- cdn bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/default.css" />
+    <title>Le Fournil - Boulangerie Artisanale</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <h1>Le Fournil</h1>
+        <p>Boulangerie Artisanale</p>
+      </div>
+      <!-- Logo -->
+      <img src="assets/images/logo.jpg" alt="logo croissant" class="logo" />
+      <!-- Navigation -->
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary align-content-center"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Acceuil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/la-carte.html">La carte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/a-propos.html">A propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main class="container">
+      <section class="hero">
+        <div class="px-4 py-5 my-5 text-center">
+          <img
+            class="d-block mx-auto mb-4"
+            src="./assets/images/54307.jpg"
+            alt=""
+            width="350px"
+          />
+          <h1 class="display-5 fw-bold text-body-emphasis">
+            Notre savoir-faire
+          </h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+              Chaque jour, nous nous engageons à créer des produits de qualité
+              supérieure, en utilisant des méthodes traditionnelles et des
+              ingrédients frais.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-lg px-4 gap-3">
+                <a class="link-hero" href="pages/a-propos.html"
+                  >En savoir plus...</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products-home">
+        <h2>Nos produits phares</h2>
+        <p>
+          Découvrez notre gamme de produits artisanaux, conçus pour satisfaire
+          vos goûts les plus exigeants.
+        </p>
+        <article class="product">
+          <h3>Baguette tradition</h3>
+          <img
+            class="photo-section"
+            src="assets/images/tradition.jpg"
+            alt="différents types de pains"
+            height="400px"
+          />
+          <p>Une baguette traditionnelle, cuit dans un four à bois.</p>
+          <button type="button" class="btn btn-phare btn-lg px-4 gap-3">
+            <a href="/pages/la-carte.html#bread-section">En savoir plus...</a>
+          </button>
+        </article>
+        <article class="product">
+          <h3>Macarons aux citron</h3>
+          <img
+            class="photo-section"
+            src="assets/images/Macarons.jpg"
+            alt="macarons aux citron"
+            height="400px"
+          />
+          <p>
+            Des macarons délicats et savoureux, préparés avec des amandes et du
+            sucre, offrant une texture légère et un goût exquis.
+          </p>
+          <button type="button" class="btn btn-phare btn-lg px-4 gap-3">
+            <a href="/pages/la-carte.html#patisseries-section"
+              >En savoir plus...</a
+            >
+          </button>
+        </article>
+        <article class="product">
+          <h3>Croissant pur beurre</h3>
+          <img
+            class="photo-section"
+            src="assets/images/croissant_2.jpg"
+            alt="croissants au beurre"
+            height="400px"
+          />
+          <p>
+            Un délicieux croissant croustillant, préparé avec de la pâte à choux
+            et de la margarine.
+          </p>
+          <button type="button" class="btn btn-phare btn-lg px-4 gap-3">
+            <a href="/pages/la-carte.html#viennoiseries-section"
+              >En savoir plus...</a
+            >
+          </button>
+        </article>
+      </section>
+    </main>
+  </body>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Le Fournil. Tous droits réservés.</p>
+    <p>123 Rue de la Boulangerie, 75001 Paris</p>
+    <p>Horaires: Lundi-Vendredi 7h-19h, Samedi 8h-18h, Dimanche 9h-17h</p>
+  </footer>
+</html>
