@@ -142,14 +142,21 @@ footer {
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  padding: 5px;
   a {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   }
+}
+.ancre-la-carte a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .btn-phare a {
   text-decoration: none;
