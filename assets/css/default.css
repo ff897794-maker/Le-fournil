@@ -4,13 +4,28 @@
   --accent-color: #ff6f61;
   --background-color: #f5f5f5;
 }
-
+/* Style globale */
 .body {
   background-color: var(--background-color);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*  HEADER */
 header {
   display: flex;
   background-color: var(--primary-color);
@@ -24,22 +39,12 @@ header img {
   height: auto;
   border-radius: 50%;
 }
-h2 {
-  color: var(--secondary-color);
-  text-align: center;
-  margin-top: 20px;
-}
-footer {
-  background-color: var(--primary-color);
-  padding: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .navbar {
   border: 1px solid var(--secondary-color);
   border-radius: 20px;
@@ -51,29 +56,33 @@ footer {
   padding: 10px 20px;
   display: inline-block;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* Style pour le footer */
+footer {
+  background-color: var(--primary-color);
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.head-section {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
-.head-section h2 {
+
+/* PAGE ACCUEIL */
+.hero {
+  background-color: var(--primary-color);
+}
+.link-hero {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
   color: var(--secondary-color);
-  box-shadow: 0 4px 6px var(--primary-color);
-  border-radius: 15%;
-  font-size: 2em;
-  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }
-.photo-section {
-  width: 80%;
-  height: 150px;
-  border-radius: 20px;
+.link-hero:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--primary-color);
+  transition: background-color 0.3s ease;
 }
 .products-home {
   display: flex;
@@ -94,6 +103,39 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+.btn-phare a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: medium;
+  /* font-weight: medium; */
+  padding: 5px 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.btn-phare a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* PAGE LA CARTE */
+.head-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.head-section h2 {
+  color: var(--secondary-color);
+  box-shadow: 0 4px 6px var(--primary-color);
+  border-radius: 15%;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.photo-section {
+  width: 80%;
+  height: 150px;
+  border-radius: 20px;
+}
+
 .products-la-carte {
   color: var(--secondary-color);
 }
@@ -119,24 +161,7 @@ footer {
   transition: transform 0.3s ease;
   cursor: help;
 }
-.hero {
-  background-color: var(--primary-color);
-}
-.link-hero {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-.link-hero:hover {
-  background-color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
-  color: var(--primary-color);
-  transition: background-color 0.3s ease;
-}
+
 .ancre-la-carte {
   display: flex;
   justify-content: center;
@@ -158,20 +183,8 @@ footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-.btn-phare a {
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: medium;
-  /* font-weight: medium; */
-  padding: 5px 10px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-.btn-phare a:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
+
+/* PAGE A PROPOS */
 .about-article {
   border: 1px solid var(--secondary-color);
   border-radius: 25px;
@@ -193,6 +206,8 @@ footer {
   margin-bottom: 10px;
   border-radius: 40px 0 40px 0;
 }
+
+/* PAGE CONTACT */
 .form-contact {
   display: flex;
   padding: 60px 45px;
