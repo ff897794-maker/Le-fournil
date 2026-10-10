@@ -92,14 +92,25 @@
         Découvrez notre gamme de produits artisanaux, conçus pour satisfaire vos
         goûts les plus exigeants.
       </p>
+
       <section class="products-home">
         <article class="product">
-          <h3>Baguette tradition</h3>
+          <div id="badge-title">
+            <h3>Baguette tradition</h3>
+            <img
+              id="medaille"
+              src="/assets/images/medaille.png"
+              alt="Medaille or"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover click"
+              data-bs-placement="left"
+              data-bs-content="Medaille d'or au concours de la meilleure baguette de Paris 2025"
+            />
+          </div>
           <img
             class="photo-section"
             src="assets/images/tradition.jpg"
-            alt="différents types de pains"
-            height="400px"
+            alt="baguette tradition"
           />
           <p>Une baguette traditionnelle, cuit dans un four à bois.</p>
           <button type="button" class="btn btn-phare btn-lg px-4 gap-3">
@@ -112,16 +123,18 @@
             class="photo-section"
             src="assets/images/Macarons.jpg"
             alt="macarons aux citron"
-            height="400px"
           />
           <p>
             Des macarons délicats et savoureux, préparés avec des amandes et du
             sucre, offrant une texture légère et un goût exquis.
           </p>
-          <button type="button" class="btn btn-phare btn-lg px-4 gap-3">
+          <button
+            type="button"
+            class="btn btn-phare btn-lg px-4 gap-3 position-relative"
+          >
             <a href="/pages/la-carte.html#patisseries-section"
-              >En savoir plus...</a
-            >
+              >En savoir plus...
+            </a>
           </button>
         </article>
         <article class="product">
@@ -130,7 +143,6 @@
             class="photo-section"
             src="assets/images/croissant_2.jpg"
             alt="croissants au beurre"
-            height="400px"
           />
           <p>
             Un délicieux croissant croustillant, préparé avec de la pâte à choux
@@ -145,6 +157,21 @@
       </section>
     </main>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("Popover init");
+
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]',
+      );
+
+      console.log(popoverTriggerList);
+
+      [...popoverTriggerList].forEach((el) => {
+        new bootstrap.Popover(el);
+      });
+    });
+  </script>
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Le Fournil. Tous droits réservés.</p>

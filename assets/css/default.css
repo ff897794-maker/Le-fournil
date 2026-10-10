@@ -98,11 +98,12 @@ footer {
   padding: 10px;
   text-align: center;
 }
-.products-home .product img {
+.products-home .product .photo-section {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
+
 .btn-phare a {
   text-decoration: none;
   color: var(--secondary-color);
@@ -117,7 +118,19 @@ footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-
+#badge-title {
+  display: flex;
+  align-items: center;
+}
+#badge-title h3 {
+  margin-left: 20px;
+}
+#medaille {
+  width: 30px;
+  height: auto;
+  position: relative;
+  top: 55px;
+}
 /* PAGE LA CARTE */
 .head-section {
   text-align: center;
