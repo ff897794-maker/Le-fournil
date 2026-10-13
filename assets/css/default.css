@@ -32,7 +32,7 @@ header {
   padding: 20px;
   text-align: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 header img {
   width: 100px;
