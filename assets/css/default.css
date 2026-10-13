@@ -56,6 +56,9 @@ header img {
   padding: 10px 20px;
   display: inline-block;
 }
+nav li {
+  font-weight: 600;
+}
 
 /* Style pour le footer */
 footer {
