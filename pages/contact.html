@@ -66,35 +66,153 @@
     <main class="container">
       <h2>Contact</h2>
       <p>Pour toute question ou demande, n'hésitez pas à nous contacter.</p>
-      <form action="/pages/contact.html" class="form-contact">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nom</label>
+      <form action="#" method="post" class="form-contact">
+        <fieldset class="form-fieldset">
+          <legend>Informations de contact</legend>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Votre nom"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <!-- Champ email -->
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+            <!-- message erreur formulaire ( pour JS )-->
+            <div class="invalid-feedback">
+              Veuillez entrer une adresse email valide.
+            </div>
+          </div>
+          <!-- Champ téléphone -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Téléphone (optionnel)</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Votre numéro de téléphone"
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <!-- message erreur formulaire ( pour JS )-->
+          <div class="invalid-feedback">
+            Veuillez entrer un numéro de téléphone valide.
+          </div>
+        </fieldset>
+        <fieldset class="form-fieldset">
+          <legend>Informations commande</legend>
+          <!-- date retrait -->
+          <div class="mb-3">
+            <label for="date" class="form-label">Date de retrait</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              name="date"
+              required
+            />
+          </div>
+          <!-- produit -->
+          <div class="mb-3">
+            <label for="product" class="form-label">Produit</label>
+            <select class="form-control" id="product" name="product" required>
+              <option value="">Sélectionnez un produit</option>
+              <optgroup label="Pains">
+                <option value="baguette">Baguette tradition</option>
+                <option value="pain-complet-noix">Pain complet aux noix</option>
+                <option value="pain-levain">Pain au levain</option>
+              </optgroup>
+              <optgroup label="Viennoiseries">
+                <option value="croissant">Croissants</option>
+                <option value="pain-au-chocolat">Pains au chocolat</option>
+                <option value="pain-aux-raisins">Pains aux raisins</option>
+              </optgroup>
+              <optgroup label="Pâtisseries">
+                <option value="macarons">Macarons</option>
+                <option value="beignets-fourés">Beignets fourés</option>
+                <option value="tarte-fraise">Tartes aux fraises</option>
+              </optgroup>
+            </select>
+          </div>
+          <!-- quantité -->
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantité</label>
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="20"
+              value="1"
+            />
+          </div>
+          <!-- mode de retrait (radio)-->
+          <div class="mb-3">
+            <label for="pickup" class="form-label">Mode de retrait</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="pickup"
+                id="in-store"
+                value="in-store"
+                checked
+              />
+              <label class="form-check-label" for="in-store">
+                En magasin
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="pickup"
+                id="delivery"
+                value="delivery"
+              />
+              <label class="form-check-label" for="delivery"> Livraison </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- message -->
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="5"
+              maxlength="300"
+            ></textarea>
+          </div>
+        </fieldset>
+        <!-- checkbox conditions -->
+        <div class="form-check">
           <input
-            type="text"
-            class="form-control"
-            id="name"
-            name="name"
+            class="form-check-input"
+            type="checkbox"
+            id="terms"
+            name="terms"
             required
           />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea
-            class="form-control"
-            id="message"
-            name="message"
-            rows="5"
-          ></textarea>
+          <label class="form-check-label" for="terms">
+            J'accepte les conditions d'utilisation
+          </label>
         </div>
         <button type="submit" class="btn-contact">Envoyer</button>
       </form>
