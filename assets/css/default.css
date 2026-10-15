@@ -66,7 +66,7 @@ nav li {
   font-weight: 600;
 }
 
-/* Style pour le footer */
+/* FOOTER */
 footer {
   background-color: var(--primary-color);
   padding: 20px;
@@ -228,6 +228,17 @@ footer {
 .about-article footer {
   margin-bottom: 10px;
   border-radius: 40px 0 40px 0;
+}
+
+/* ASIDE */
+.alert {
+  background-color: var(--primary-color);
+  width: auto;
+  max-width: fit-content;
+  justify-self: center;
+}
+.alert p {
+  font-size: medium;
 }
 
 /* PAGE CONTACT */
