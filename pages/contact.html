@@ -65,7 +65,44 @@
     </header>
     <main class="container">
       <h2>Contact</h2>
-      <p>Pour toute question ou demande, n'hésitez pas à nous contacter.</p>
+      <p>Voici le formulaire de contact pour les commandes.</p>
+
+      <!-- Radio pour choisir le type de contact   -->
+      <div class="mb-3">
+        <label class="form-label">Type de contact :</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="contactType"
+            id="reclamation"
+            value="reclamation"
+            disabled
+          />
+          <label class="form-check-label" for="reclamation">
+            Réclamation (work in progress)
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="contactType"
+            id="commande"
+            value="commande"
+            checked
+          />
+          <label class="form-check-label" for="commande"> Commande </label>
+        </div>
+      </div>
+      <!-- message d'information sur les formulaires à venir -->
+      <p class="text-muted">
+        Les formulaires de réclamation seront disponibles prochainement.
+      </p>
+      <!-- Réclamation -->
+
+      <!-- Commandes -->
+
       <form action="#" method="post" class="form-contact">
         <fieldset class="form-fieldset">
           <legend>Informations de contact</legend>
@@ -202,7 +239,7 @@
           </div>
         </fieldset>
         <!-- checkbox conditions -->
-        <div class="form-check">
+        <div class="mb-3 form-check">
           <input
             class="form-check-input"
             type="checkbox"
