@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -9,6 +11,7 @@
   --secondary-color: #333;
   --accent-color: #ff6f61;
   --background-color: #f5f5f5;
+  --font-primary: "Roboto", sans-serif;
 }
 /* Style globale */
 .body {
@@ -25,8 +28,15 @@
   flex-direction: column;
   align-items: center;
 }
+h1 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
 h2 {
   color: var(--secondary-color);
+  font-family: var(--font-primary);
   text-align: center;
   margin-top: 20px;
 }
@@ -52,6 +62,7 @@ header img {
 }
 
 .navbar {
+  font-family: var(--font-primary);
   border: 1px solid var(--secondary-color);
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -68,6 +79,7 @@ nav li {
 
 /* FOOTER */
 footer {
+  font-family: var(--font-primary);
   background-color: var(--primary-color);
   padding: 20px;
   text-align: center;
@@ -86,6 +98,7 @@ footer {
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
+  font-family: var(--font-primary);
 }
 .link-hero:hover {
   background-color: var(--secondary-color);
@@ -185,6 +198,7 @@ footer {
 }
 
 .ancre-la-carte {
+  font-family: var(--font-primary);
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -242,6 +256,16 @@ footer {
 }
 
 /* PAGE CONTACT */
+.form-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
 .form-contact {
   display: flex;
   padding: 60px 45px;
@@ -260,6 +284,7 @@ footer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 .btn-contact {
+  font-family: var(--font-primary);
   text-decoration: none;
   color: var(--secondary-color);
   font-size: medium;
@@ -268,6 +293,12 @@ footer {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
+.btn-contact:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
 @media screen and (max-width: 768px) {
   .ancre-la-carte {
     flex-direction: column;
