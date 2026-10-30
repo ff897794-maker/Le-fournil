@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+@media screen and (max-width: 768px) {
+  .ancre-la-carte {
+    flex-direction: column;
+  }
+  .row {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 *,
 *::before,
 *::after {
@@ -297,14 +306,4 @@ footer {
 .btn-contact:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-}
-
-@media screen and (max-width: 768px) {
-  .ancre-la-carte {
-    flex-direction: column;
-  }
-  .row {
-    align-items: center;
-    flex-direction: column;
-  }
 }
